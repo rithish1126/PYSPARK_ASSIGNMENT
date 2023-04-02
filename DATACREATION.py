@@ -9,7 +9,7 @@ spark = SparkSession.builder.master("local[1]").appName("SparkByExamples.com").g
 def gettingdatafromapi(): #FUNCTION RESPONSIBLE TO GET THE INFORMATION FROM THE API(RAPID API)
     url = "https://covid-19-india2.p.rapidapi.com/details.php" 
     headers = {
-        "X-RapidAPI-Key": "43ebc47e8bmsh166b24698835233p14c901jsn0e9e1cccde20",
+        "X-RapidAPI-Key": "ADD-KEY",
         "X-RapidAPI-Host": "covid-19-india2.p.rapidapi.com"
     }
     response = requests.request("GET", url, headers=headers) #RESPONSE OBJECT RECIEVED FROM API
