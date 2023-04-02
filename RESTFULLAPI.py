@@ -38,7 +38,7 @@ def show_api_data(): #Function to directly fetch data from the api to display to
     url = "https://covid-19-india2.p.rapidapi.com/details.php"
 
     headers = {
-        "X-RapidAPI-Key": "43ebc47e8bmsh166b24698835233p14c901jsn0e9e1cccde20",
+        "X-RapidAPI-Key": "ADD-KEY",
         "X-RapidAPI-Host": "covid-19-india2.p.rapidapi.com"
     }
 
