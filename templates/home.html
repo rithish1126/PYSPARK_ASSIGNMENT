@@ -1,0 +1,19 @@
+  <!-- TEMPLATE HTML FILE TO DISPLAY CSV -->
+<table id="demo">
+  <h1>COVID REPORT STATE WISE IN INDIA</h1>
+  <!-- HEADER ROW -->
+  <tr>
+    {% for col in header %}
+    <th>{{ col }}</th>
+    {% endfor %}
+  </tr>
+ 
+  <!-- DATA ROWS -->
+  {% for row in rows %}
+  <tr>
+    {% for col in row %}
+    <td>{{ col }}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
