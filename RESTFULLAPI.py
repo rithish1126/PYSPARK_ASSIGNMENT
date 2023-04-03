@@ -27,7 +27,7 @@ def home():
 @app.route('/show_csv_data')
 def show_all(): #Show all the data from the csv file
     try: #tries to see if the file is available if not returns a "File missing message"
-        with open("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") as file:
+        with open("output.csv") as file:
             reader = csv.reader(file)
             header = next(reader)
             return render_template("home.html", header=header, rows=reader)
@@ -53,7 +53,7 @@ def make_csv():
     return  "<h1>:FILE CREATED</h1>"#return text once file is created
 @app.route('/get_most_affected')
 def get_most_affected_state():#function to get the most affected state from the data frame
-    if not os.path.exists("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") :
+    if not os.path.exists("output.csv") :
         return  "<h1>:(ERROR)FILE MISSING</h1>"
     else:
         df=createdataframefromcsv()#create the data fram of the csv file to work on
@@ -64,7 +64,7 @@ def get_most_affected_state():#function to get the most affected state from the 
 @app.route('/get_least_affected')
 def get_least_affected_state():#function to get least affected state from the data frame
     
-     if not os.path.exists("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") :
+     if not os.path.exists("output.csv") :
         return  "<h1>:(ERROR)FILE MISSING</h1>"
      else:
         df=createdataframefromcsv()
@@ -74,7 +74,7 @@ def get_least_affected_state():#function to get least affected state from the da
         return jsonify({'Least affected state ': state})
 @app.route('/highest_covid_cases')
 def highest_covid_cases():
-    if not os.path.exists("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") :
+    if not os.path.exists("output.csv") :
         return  "<h1>:(ERROR)FILE MISSING</h1>"
     else:
         df=createdataframefromcsv()
@@ -85,7 +85,7 @@ def highest_covid_cases():
         return jsonify({'State with highest cases ': state,'Confirmed Covid cases':confirmed})
 @app.route('/least_covid_cases')
 def least_covid_cases():
-    if not os.path.exists("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") :
+    if not os.path.exists("output.csv") :
         return  "<h1>:(ERROR)FILE MISSING</h1>"
     else:
         df=createdataframefromcsv()
@@ -96,7 +96,7 @@ def least_covid_cases():
         return jsonify({'State with the least cases':state,'Confirmed Covid cases':confirmed})
 @app.route('/total_cases')
 def total_cases():
-    if not os.path.exists("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") :
+    if not os.path.exists("output.csv") :
         return  "<h1>:(ERROR)FILE MISSING</h1>"
     else:
         df=createdataframefromcsv()
@@ -105,7 +105,7 @@ def total_cases():
         return jsonify({'Total cases':sub[0][0]})
 @app.route('/handle_well')
 def state_handle_well():
-    if not os.path.exists("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") :
+    if not os.path.exists("output.csv") :
         return  "<h1>:(ERROR)FILE MISSING</h1>"
     else:
         df=createdataframefromcsv()
@@ -114,7 +114,7 @@ def state_handle_well():
         return jsonify({'WELL HANDLED STATE':sub[0][0],'Efficiancy':sub[0][1]})
 @app.route('/least_well')
 def state_least_well():
-    if not os.path.exists("/Users/devarithish/Desktop/PYSPARK ASSIGNMENT/output.csv") :
+    if not os.path.exists("output.csv") :
         return  "<h1>:(ERROR)FILE MISSING</h1>"
     else:
         df=createdataframefromcsv()
