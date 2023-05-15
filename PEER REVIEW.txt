@@ -1,0 +1,16 @@
+Praneeth's code review 
+
+1)Code retrieves COVID-19 data from an API, cleans it, analyzes it using PySpark, and creates a RESTful API to display the analyzed results.
+2)The data is retrieved from the API, cleaned, and stored in a cleaned format. 
+3)The api_flask.py file displays the desired output data by specifing the different parameters using different methods.
+4)The analysis includes finding the most affected state, the least affected state, the state with the highest number of COVID cases, the state with the lowest number of COVID cases, the total number of COVID cases in the country, the most efficient state, the least efficient state, the least suffered state, and the most suffered state.
+5)The analyzed data is displayed in a JSON format when the API is accessed.
+
+Arin's code review
+
+1)Code retrieves Covid-19 data state wise from rapid api and then the data that is recieved is cleansed. 
+2)The data is then stored in a listobject and then to rdd to dataframe.
+3)Makeapis.py file displays the menu of all the information that can be retrieved
+4)The analysis includes finding the most affected state, the least affected state, the state with the highest number of COVID cases, the state with the lowest number of COVID cases, the total number of COVID cases in the country, the most efficient state, the least efficient state, the least suffered state, and the most suffered state.
+5)The analyzed data is displayed in a JSON format when the API is accessed.
+
